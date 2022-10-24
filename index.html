@@ -1,59 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<html lang="pt-br">
 
-    <link rel="stylesheet" href="./src/css/reset.css" />
-    <link rel="stylesheet" href="./src/css/style.css" />
+<head>
 
-    <title>Lista de Produtos - Continuação</title>
-  </head>
-  <body>
-    <!-- CABEÇALHO -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="src/img/icons/apple_fruit_food_icon_148896.ico">
+    <link rel="stylesheet" href="./src/css/reset.css">
+    <link rel="stylesheet" href="./src/css/style.css">
+
+    <title>Mercadinho</title>
+
+</head>
+
+<body>
+
     <header>
-      <div id="filters" class="filtersContainer">
-        <button class="estiloGeralBotoes estiloGeralBotoes--mostrarTodos">
-          Mostrar Todos
-        </button>
-        <button class="estiloGeralBotoes estiloGeralBotoes--filtrarHortifruti">
-          Mostrar Hortifruti
-        </button>
+
+        <div id="header_filters">
+            <nav id="filters" class="filtersContainer">
+
+                <button class="estiloGeralBotoes" id="estiloGeralBotoes--mostrarTodos">Todos Produtos</button>
+                <button class="estiloGeralBotoes" id="estiloGeralBotoes--filtrarHortifruti">Hortifruti</button>
+                <button class="estiloGeralBotoes" id="estiloGeralBotoes--filtrarPanificadora">Panificadora</button>
+                <button class="estiloGeralBotoes" id="estiloGeralBotoes--filtrarLaticinios">Laticínios</button>
+
+            </nav>
+        </div>
 
         <div class="containerBuscaPorNome">
-          <input
-            type="text"
-            placeholder="Nome do produto"
-            class="campoBuscaPorNome"
-          />
-          <button
-            class="estiloGeralBotoes estiloGeralBotoes--botaoBuscaPorNome"
-          >
-            Buscar
-          </button>
+
+            <input type="text" placeholder="Nome do produto" id="campoBuscaPorNome">
+            <button id="estiloGeralBotoes--botaoBuscaPorNome">
+                <img src="src/img/icons/search.svg" alt="">
+            </button>
+
         </div>
-      </div>
+
     </header>
 
     <main>
-      <div class="containerListaProdutos" id="listProdutos">
-        <ul>
-          <!-- LISTA DE PRODUTOS -->
-        </ul>
-      </div>
 
-      <div id="carrinho" class="containerCarrinho">
-        <ul>
-          <!-- ITENS ADICIONADOS AO CARRINHO -->
-        </ul>
+        <div class="containerListaProdutos" id="listProdutos">
 
-        <div class="containerPrecoTotal">
-          <p>Preço total: R$<span id="precoTotal">00.00</span></p>
+            <ul>
+            </ul>
+
         </div>
-      </div>
+
+        <div id="containerCarrinho">
+
+            <div id="tituloCarrinho">
+
+                <img src="src/img/icons/cartAdd.svg" alt="">
+                <h3>Carrinho</h3>
+
+            </div>
+
+            <div id="mainCarrinho" class="mainCarrinho_Vazio">
+                <img id='imgCarrinhoVazio' src="src/img/icons/cart.svg" alt="">
+                <p id="carrinhoVazio">Por enquanto não temos itens no carrinho</p>
+
+            </div>
+
+            <div id="infoFinaisCarrinho" class="hidden">
+            </div>
+
+        </div>
+
     </main>
 
-    <script type="module" src="src/script.js"></script>
-  </body>
+    <script src="src/js/dataProdutos.js"></script>
+    <script type="module" src="src/js/script.js"></script>
+</body>
+
 </html>
